@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A simple client for PDFTable API}
   spec.description   = %q{Pdftable.client provides two methods: remaining_pages and convert}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/ej2015/pdftable-api.git"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
