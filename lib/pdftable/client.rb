@@ -1,6 +1,6 @@
 module Pdftable
-  class Client 
-    
+  class Client
+ 
 		attr_reader :connection
 
 		def initialize(connection = nil )

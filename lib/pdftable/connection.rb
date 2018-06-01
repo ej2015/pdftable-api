@@ -1,8 +1,5 @@
-require 'rest-client'
-require 'pdftable/configuration'
-
 module Pdftable
-	class Connection 
+	class Connection
 
 		attr_reader :configuration
 
