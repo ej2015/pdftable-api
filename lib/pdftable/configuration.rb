@@ -7,7 +7,7 @@ module Pdftable
 		attr_accessor :host, :key
 
 		def initialize
-			@host = 'https://pdftables.com'
+			@host = 'pdftables.com'
 			@key = nil
 		end
 

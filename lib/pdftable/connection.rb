@@ -8,22 +8,25 @@ module Pdftable
 
 		def initialize
 			@configuration = Pdftable::Configuration.instance
-      @conn = RestClient::Resource.new(@configuration.host)
 		end
     
     def get (path)
-      opt = {params: {key: configuration.key} }
-      @conn[path].get(opt)
+      opt = { key: configuration.key }
+      RestClient.get url(path, opt)
     end
 
 		def post (path, file:, format:)
-			File.open file do |f|
-        opt = {  file: f, params: { key: configuration.key, format: format} }
-			  @conn[path].post(opt)
-			end
-			#req = RestClient::Request.new method: :post, url:  uri, payload: { multipart: true, file: File.new("pdf_table.pdf", 'rb')}, headers: {params: {key: 'zbwq7wyefyrr', format: "xml"}}
+      opt = {  key: configuration.key, format: format }
+			RestClient.post url(path, opt), file: File.new(file, 'rb')
+			#req = RestClient::Request.new method: :post, url:  uri, payload: { multipart: true, file: File.new("pdf_table.pdf", 'rb')}, headers: {params: {key: 'abcde', format: "xml"}}
 			#response = req.execute
     end
+
+		private
+
+		def url(path, opt)
+			URI::HTTPS.build(host: configuration.host, path: path, query: URI.encode_www_form(opt)).to_s
+		end
     
 
   end
