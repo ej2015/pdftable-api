@@ -1,4 +1,7 @@
 # Pdftable::Api
+[![Build Status](https://travis-ci.org/ej2015/pdftable-api.svg?branch=master)](https://travis-ci.org/ej2015/pdftable-api)
+[![Maintainability](https://api.codeclimate.com/v1/badges/1cbdaca4ce5f83a9d898/maintainability)](https://codeclimate.com/github/ej2015/pdftable-api/maintainability)
+[![CodeFactor](https://www.codefactor.io/repository/github/ej2015/pdftable-api/badge)](https://www.codefactor.io/repository/github/ej2015/pdftable-api)
 A little client for pdftables.com API
 ## Installation
 
