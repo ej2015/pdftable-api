@@ -7,7 +7,7 @@ require 'rest-client'
 module Pdftable
 
 	class << self
-		attr_accessor :configuration
+		attr_writer :configuration
 
 		def configuration
 			@configuration ||= Configuration.instance
