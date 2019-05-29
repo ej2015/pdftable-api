@@ -5,5 +5,5 @@ require "fakeweb"
 FakeWeb.allow_net_connect = false
 
 Pdftable.configure do |c|
-	c.key = 'abcde'
+  c.key = 'abcde'
 end

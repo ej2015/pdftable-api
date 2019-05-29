@@ -6,20 +6,20 @@ require 'rest-client'
 
 module Pdftable
 
-	class << self
-		attr_writer :configuration
+  class << self
+    attr_writer :configuration
 
-		def configuration
-			@configuration ||= Configuration.instance
-		end
+    def configuration
+      @configuration ||= Configuration.instance
+    end
 
-		def configure
-			yield(configuration)
-		end
+    def configure
+      yield(configuration)
+    end
 
-		def client
-			Pdftable::Client.new
-		end
-	end
+    def client
+      Pdftable::Client.new
+    end
+  end
 
 end
